@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment_1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="Assignment1.js"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div
+      id="navigationbar"
+      class="bg-gray-800 text-white p-4 md:flex md:justify-between"
+    >
+      <h1 class="text-4xl font-semibold">Conversion Of Units</h1>
+      <div class="mt-6 md:mt-0" id="naviagtion_buttons">
+        <button
+          id="weightButton"
+          class="bg-red-700 p-3 mr-5"
+          onclick="showTab('weightTab')"
+        >
+          Weight
+        </button>
+        <button
+          id="temperatureButton"
+          class="bg-red-700 p-3 mr-5"
+          onclick="showTab('temperatureTab')"
+        >
+          Temperature
+        </button>
+        <button
+          id="distanceButton"
+          class="bg-red-700 p-3 mr-5"
+          onclick="showTab('distanceTab')"
+        >
+          Distance
+        </button>
+      </div>
+    </div>
+
+    <!--Weight-->
+
+    <div id="weightTab" class="p-6">
+      <h2 for="weightValue">
+        Enter the desired value or values to be converted (comma seperated):
+      </h2>
+      <input id="weightValue" type="text" class="border p-3 mt-3 w-4/12" />
+      <div class="mt-8">
+        <select id="weightDir" class="border p-3">
+          <option value="lbstokgs">Pounds to Kilograms</option>
+          <option value="kgstolbs">Kilograms to Pounds</option>
+        </select>
+      </div>
+      <div
+        id="weightResult"
+        class="border p-5 bg-gray-800 text-white mt-6 w-4/12"
+      ></div>
+      <div>
+        <button
+          onclick="convertweight()"
+          class="bg-red-700 text-white p-3 mr-5 mt-6 w-96"
+        >
+          Convert Weight
+        </button>
+      </div>
+    </div>
+
+    <!--Temperature-->
+
+    <div id="temperatureTab" class="p-6 hidden">
+      <h2 for="temperatureValue">
+        Enter the desired value or values to be converted (comma seperated):
+      </h2>
+      <input id="temperatureValue" type="text" class="border p-3 mt-3 w-4/12" />
+      <div class="mt-8">
+        <select id="temperatureDir" class="border p-3">
+          <option value="cToF">Celsius to Fahrenheit</option>
+          <option value="fToC">Fahrenheit to Celsius</option>
+        </select>
+      </div>
+      <div
+        id="temperatureResult"
+        class="border p-5 bg-gray-800 text-white mt-6 w-4/12"
+      ></div>
+      <div>
+        <button
+          onclick="convertTemperature()"
+          class="bg-red-700 text-white p-3 mr-5 mt-6 w-96"
+        >
+          Convert Temperature
+        </button>
+      </div>
+    </div>
+
+    <!--Distance-->
+    
+    <div id="distanceTab" class="p-6 hidden">
+      <h2 for="distanceValue">
+        Enter the desired value or values to be converted (comma seperated):
+      </h2>
+      <input id="distanceValue" type="text" class="border p-3 mt-3 w-4/12" />
+      <div class="mt-8">
+        <select id="distanceDir" class="border p-3">
+          <option value="MiletoKm">Miles to Kilometers</option>
+          <option value="KmtoMile">Kilometers to Miles</option>
+        </select>
+      </div>
+      <div
+        id="distanceResult"
+        class="border p-5 bg-gray-800 text-white mt-6 w-4/12"
+      ></div>
+      <div>
+        <button
+          onclick="convertDistance()"
+          class="bg-red-700 text-white p-3 mr-5 mt-6 w-96"
+        >
+          Convert Distance
+        </button>
+      </div>
+    </div>
+
+    <footer class="bg-white py-6">
+      <div class="container mx-auto text-center">
+        <p class="bg-gray-300 font-sans font-semibold">
+          &copy; 2024 All rights reserved - Group 6
+        </p>
+        <p class="bg-gray-300 font-sans font-semibold">
+          Ebubechukwu Emmanuel Ebite, Dipanshu Bagga, Aryan Rattan, Anna-kay
+          Joiles
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
